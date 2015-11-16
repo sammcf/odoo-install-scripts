@@ -22,8 +22,8 @@ OE_USER="odoo"
 OE_HOME="/opt/$OE_USER"
 OE_HOME_EXT="/opt/$OE_USER/$OE_USER-server"
 
-#Enter version for checkout "8.0" for version 8.0, "7.0 (version 7), saas-4, saas-5 (opendays version) and "master" for trunk
-OE_VERSION="8.0"
+#Enter version for checkout "9.0" for version 9.0, "8.0" for version 8.0, "7.0 (version 7), saas-4, saas-5 (opendays version) and "master" for trunk
+OE_VERSION="9.0"
 
 #set the superadmin password
 OE_SUPERADMIN="superadminpassword"
@@ -59,6 +59,10 @@ sudo apt-get install python-dateutil python-feedparser python-ldap python-libxsl
 	
 echo -e "\n---- Install python libraries ----"
 sudo pip install gdata
+
+echo -e "\n---- Install node & packages ----"
+sudo apt-get install node npm node-less node-clean-css
+sudo npm install -g less-plugin-clean-css 
 
 echo -e "\n---- Install wkhtml and place on correct place for ODOO 8 ----"
 sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
